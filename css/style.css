@@ -108,7 +108,7 @@ nav li a:active{
  position: absolute;
  top: 500px;
  z-index: 5;
- text-align: center;
+ text-align: left;
  font-family: "Zilla Slab", serif;
  font-weight:700;
  text-transform: uppercase;
