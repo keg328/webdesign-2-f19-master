@@ -105,15 +105,17 @@ nav li a:active{
 
 .type-overlay h1{
  width: 100%;
- position: absolute;
- top: 500px;
+ position:absolute;
+ padding-bottom:20px;
+ top:800px;
  z-index: 5;
- text-align: left;
+ text-align: center;
  font-family: "Zilla Slab", serif;
  font-weight:700;
  text-transform: uppercase;
  color: #a5cb9c;
- margin-left:20px;
+ margin-left:auto;
+ margin-right:auto;
 }
 
 .home {
