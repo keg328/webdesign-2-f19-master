@@ -423,8 +423,8 @@ footer a:active {
   width: 200px;
   margin-bottom: 10px;
   margin-top: 20px;
-  margin-left: 150px;
-  float:left;
+  margin-left: 50px;
+  margin-right:auto;
 }
 
 .copyright p{
