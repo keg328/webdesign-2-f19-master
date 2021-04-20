@@ -374,7 +374,7 @@ input{
   font-weight: 100;
   color: #ffffff;
   border-radius:10px;
-  margin-left:450px;
+  margin-left:425px;
   opacity: 100% !important;
 }
 
@@ -415,6 +415,7 @@ footer a:active {
   text-decoration: none;
   margin-left: auto;
   margin-right: auto;
+  text-align:center;
 
 }
 
@@ -432,6 +433,7 @@ footer a:active {
   font-family:"Asap Condensed", sans-serif;
   font-weight: 100;
   color: #A5A1A1;
+  text-align:center;
 }
 
 .navbar{
