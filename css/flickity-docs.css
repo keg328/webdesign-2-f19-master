@@ -1273,7 +1273,7 @@ html { font-size: 17px; }
 html.export { font-size: 15px; }
 
 a {
-  color: #E90;
+  color: #6A6;
   text-decoration: none;
 }
 
@@ -1568,98 +1568,6 @@ code .flickity { text-decoration: underline; }
 
 }
 
-/* call out
-------------------------- */
-
-.call-out {
-  border-top: 2px solid #ED2;
-  border-bottom: 2px solid #ED2;
-  padding-left: 40px;
-  position: relative;
-  margin: 20px 0;
-}
-
-/* (i) */
-.call-out:before {
-  content: 'i';
-  display: block;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 5px;
-  top: 20px;
-  background: #ED2;
-  border-radius: 50%;
-  text-align: center;
-  color: white;
-  font-family: Consolas, Georgia, serif;
-  font-style: italic;
-}
-
-.call-out h2 {
-  margin-top: 0;
-  padding-top: 10px;
-  border-top: none;
-}
-
-.call-out--chill { border-color: #8C8; }
-.call-out--chill:before { background: #8C8; }
-
-/* ---- call-out--big-copy ---- */
-
-.call-out--big-copy p,
-.call-out--big-copy li,
-.call-out--big-copy li:before {
-  font-size: 1.2rem;
-  line-height: 1.2;
-}
-
-/* ---- quick-start-list ---- */
-
-.call-out--big-copy ol {
-  list-style: none;
-}
-
-.quick-start-list li {
-  position: relative;
-  counter-increment: call-out-big-copy-item;
-}
-
-.quick-start-list li:before {
-  content: counter(call-out-big-copy-item) ".";
-  position: absolute;
-  left: -1.2rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.quick-start-list {
-  list-style: none;
-}
-
-@media screen and (min-width: 768px) {
-
-  .call-out {
-    border: 2px solid #ED2;
-    padding: 10px 20px 10px 80px;
-    border-radius: 6px;
-    position: relative;
-    margin: 20px 0;
-  }
-
-  .call-out--chill { border-color: #8C8; }
-
-  .call-out:before {
-    width: 40px;
-    height: 40px;
-    left: 20px;
-    top: 30px;
-    font-size: 1.9rem;
-    line-height: 46px;
-  }
-
-}
-
 /* demo carousels
 ------------------------- */
 
@@ -1681,9 +1589,19 @@ code .flickity { text-decoration: underline; }
 
 .flickity-enabled .carousel-cell { margin-bottom: 0; }
 
+.carousel-cell:before,
+.carousel-cell__number {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  content: counter(carousel-cell);
+  text-align: center;
+  line-height: 160px;
+  font-size: 80px;
+  color: white;
+}
 
-
-.carousel--not-counting { content: none; }
+.carousel--not-counting .carousel-cell:before { content: none; }
 
 /* ---- carousel-image-cell ---- */
 /* frames single image in cell */
@@ -1835,6 +1753,98 @@ code .flickity { text-decoration: underline; }
   .carousel--images-demo img {
     height: 400px;
   }
+}
+
+/* call out
+------------------------- */
+
+.call-out {
+  border-top: 2px solid #ED2;
+  border-bottom: 2px solid #ED2;
+  padding-left: 40px;
+  position: relative;
+  margin: 20px 0;
+}
+
+/* (i) */
+.call-out:before {
+  content: 'i';
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 5px;
+  top: 20px;
+  background: #ED2;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-family: Consolas, Georgia, serif;
+  font-style: italic;
+}
+
+.call-out h2 {
+  margin-top: 0;
+  padding-top: 10px;
+  border-top: none;
+}
+
+.call-out--chill { border-color: #8C8; }
+.call-out--chill:before { background: #8C8; }
+
+/* ---- call-out--big-copy ---- */
+
+.call-out--big-copy p,
+.call-out--big-copy li,
+.call-out--big-copy li:before {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/* ---- quick-start-list ---- */
+
+.call-out--big-copy ol {
+  list-style: none;
+}
+
+.quick-start-list li {
+  position: relative;
+  counter-increment: call-out-big-copy-item;
+}
+
+.quick-start-list li:before {
+  content: counter(call-out-big-copy-item) ".";
+  position: absolute;
+  left: -1.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.quick-start-list {
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .call-out {
+    border: 2px solid #ED2;
+    padding: 10px 20px 10px 80px;
+    border-radius: 6px;
+    position: relative;
+    margin: 20px 0;
+  }
+
+  .call-out--chill { border-color: #8C8; }
+
+  .call-out:before {
+    width: 40px;
+    height: 40px;
+    left: 20px;
+    top: 30px;
+    font-size: 1.9rem;
+    line-height: 46px;
+  }
+
 }
 
 /* example
@@ -2508,7 +2518,7 @@ code .flickity { text-decoration: underline; }
   width: 100px;
 }
 
-.carousel--nav  {
+.carousel--nav .carousel-cell:before {
   font-size: 50px;
   line-height: 80px;
 }
@@ -2824,7 +2834,7 @@ td.event-table__time {
   height: 320px;
 }
 
-.carousel--resize.is-expanded {
+.carousel--resize.is-expanded .carousel-cell:before {
   line-height: 320px;
 }
 
