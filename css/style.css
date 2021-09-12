@@ -127,7 +127,7 @@ nav li a:active{
   width: 100%;
   padding: 100px 0;
   float: left;
-  background: url("../images/dark-honeycomb.png");
+  background: url("../images/dark-honeycomb.png") repeat;
 }
 
 h2{
